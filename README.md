@@ -12,6 +12,12 @@ Frequently, the “raw” data is first loaded temporarily into a staging table 
 transformed using a series of SQL statements before it is inserted into the destination reporting tables.
 The most efficient workflow for this process involves transforming only data that is new or modified.
 
+# Traditional approach
+![](/Images/traditional-approach.png)
+
+# Snowflake approach
+![](/Images/snowflake-approach.png)
+
 # What's in this tutorial ?
 In this tutorial we are going to create the following Data Pipeline :
   * Manually ingest JSON files to a raw_json_table table without any transformation (only 1 VARIANT column)
