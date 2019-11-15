@@ -1,7 +1,10 @@
-# Snowflake-Json-DataPipeline
+# Snowflake JSON Data Pipeline
 Building Json data pipeline within Snowflake using Streams and Tasks
 
 Online documentation : https://docs.snowflake.net/manuals/user-guide/data-pipelines-intro.html
+
+# Prerequisites
+This tutorial use a citibike dataset available [here]()
 
 # Introduction
 Data pipelines automate many of the manual steps involved in transforming and optimizing continuous data loads.
