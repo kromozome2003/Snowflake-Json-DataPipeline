@@ -35,7 +35,7 @@ mike.uzan@snowflake.com
 
 --------------------------------------------------------------------------------*/
 -- Context setting
-CREATE DATABASE CDPST;
+CREATE OR REPLACE DATABASE CDPST;
 USE DATABASE CDPST;
 USE SCHEMA CDPST.PUBLIC;
 CREATE warehouse IF NOT EXISTS load_wh WITH warehouse_size = 'medium' auto_suspend = 60 initially_suspended = true;
@@ -52,8 +52,6 @@ DROP TABLE IF EXISTS transformed_json_table;
 DROP TABLE IF EXISTS final_table;
 DROP PROCEDURE IF EXISTS stored_proc_extract_json();
 DROP PROCEDURE IF EXISTS stored_proc_aggregate_final();
-ALTER TASK extract_json_data RESUME;
-ALTER TASK aggregate_final_data RESUME;
 DROP TASK IF EXISTS extract_json_data;
 DROP TASK IF EXISTS aggregate_final_data;
 DROP FILE FORMAT IF EXISTS CDPST.PUBLIC.JSON;
